@@ -8,6 +8,7 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 	.editorconfig = .editorconfig
 	LICENSE = LICENSE
+	GitVersion.yml = GitVersion.yml
 EndProjectSection
 EndProject
 Global

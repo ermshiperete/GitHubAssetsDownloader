@@ -1,0 +1,13 @@
+assembly-versioning-scheme: MajorMinor
+mode: ContinuousDeployment
+branches:
+  main:
+    tag: beta
+    regex: (origin/)?(main)
+  pull-request:
+    mode: ContinuousDeployment
+    tag: PR
+  feature:
+    regex: feature[/-]
+    mode: ContinuousDeployment
+    tag: alpha
