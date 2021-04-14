@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.2] - 2021-04-14
+
+### Added
+
+- Add optional filter parameter
+
 ## [1.0.1] - 2021-04-14
 
 ### Added
@@ -28,7 +34,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial version
 
-[Unreleased]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.0...master
+[Unreleased]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.2...master
 
+[1.0.2]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/5a47832...v1.0.0

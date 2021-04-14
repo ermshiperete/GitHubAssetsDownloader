@@ -10,7 +10,7 @@ namespace GitHubAssetsDownloader
 		{
 			if (args.Length < 3)
 			{
-				Console.WriteLine("Usage: GitHubAssetsDownloader <user> <repo> <outputPath>");
+				Console.WriteLine("Usage: GitHubAssetsDownloader <user> <repo> <outputPath> [filter]");
 				return;
 			}
 
@@ -18,7 +18,8 @@ namespace GitHubAssetsDownloader
 			try
 			{
 				dynamic release = Downloader.GetLatestRelease(args[0], args[1]);
-				await downloader.DownloadAssets(args[2], release);
+				var filter = args.Length > 3 ? args[3] : null;
+				await downloader.DownloadAssets(args[2], filter, release);
 			}
 			catch (HttpRequestException e)
 			{
