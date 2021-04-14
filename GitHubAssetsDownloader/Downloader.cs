@@ -56,7 +56,7 @@ namespace GitHubAssetsDownloader
 		{
 			_client?.Dispose();
 			_client = null;
-			GC.SuppressFinalize(true);
+			GC.SuppressFinalize(this);
 		}
 	}
 }

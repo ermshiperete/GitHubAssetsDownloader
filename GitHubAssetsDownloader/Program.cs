@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace GitHubAssetsDownloader
@@ -14,8 +15,15 @@ namespace GitHubAssetsDownloader
 			}
 
 			using var downloader = new Downloader();
-			dynamic release = Downloader.GetLatestRelease(args[0], args[1]);
-			await downloader.DownloadAssets(args[2], release);
+			try
+			{
+				dynamic release = Downloader.GetLatestRelease(args[0], args[1]);
+				await downloader.DownloadAssets(args[2], release);
+			}
+			catch (HttpRequestException e)
+			{
+				Console.WriteLine($"ERROR: {e.Message}");
+			}
 		}
 	}
 }
