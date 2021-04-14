@@ -16,10 +16,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2021-04-14
+
+### Added
+
+- additionally support .NET Core 3.1
+
 ## [1.0.0] - 2021-04-14
+
+### Added
 
 - Initial version
 
 [Unreleased]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.0...master
 
+[1.0.1]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/5a47832...v1.0.0

@@ -23,7 +23,7 @@ namespace GitHubAssetsDownloader
 			if (response.StatusCode != HttpStatusCode.OK)
 			{
 				throw new HttpRequestException($"Can't get releases for {user}/{repo}",
-					response.ErrorException, response.StatusCode);
+					response.ErrorException);
 			}
 
 			return response.Data;
