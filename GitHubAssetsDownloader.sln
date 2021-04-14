@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetsDownloader", "AssetsDownloader\AssetsDownloader.csproj", "{22F88A91-BAC9-45FE-9176-2830BEFDD104}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubAssetsDownloader", "GitHubAssetsDownloader\GitHubAssetsDownloader.csproj", "{22F88A91-BAC9-45FE-9176-2830BEFDD104}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{151A3569-3A9F-4C11-89B0-C8DF2F4BB423}"
 ProjectSection(SolutionItems) = preProject
@@ -9,6 +9,7 @@ ProjectSection(SolutionItems) = preProject
 	.editorconfig = .editorconfig
 	LICENSE = LICENSE
 	GitVersion.yml = GitVersion.yml
+	CHANGELOG.md = CHANGELOG.md
 EndProjectSection
 EndProject
 Global

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Serializers.NewtonsoftJson;
 
-namespace AssetsDownloader
+namespace GitHubAssetsDownloader
 {
 	public class Downloader: IDisposable
 	{

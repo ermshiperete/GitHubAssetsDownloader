@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace AssetsDownloader
+namespace GitHubAssetsDownloader
 {
 	public static class Program
 	{
@@ -9,7 +9,7 @@ namespace AssetsDownloader
 		{
 			if (args.Length < 3)
 			{
-				Console.WriteLine("Usage: AssetsDownloader <user> <repo> <outputPath>");
+				Console.WriteLine("Usage: GitHubAssetsDownloader <user> <repo> <outputPath>");
 				return;
 			}
 
