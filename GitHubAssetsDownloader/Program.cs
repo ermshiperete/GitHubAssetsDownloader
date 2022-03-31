@@ -17,7 +17,7 @@ namespace GitHubAssetsDownloader
 			using var downloader = new Downloader();
 			try
 			{
-				dynamic release = Downloader.GetLatestRelease(args[0], args[1]);
+				dynamic release = await Downloader.GetLatestRelease(args[0], args[1]);
 				var filter = args.Length > 3 ? args[3] : null;
 				await downloader.DownloadAssets(args[2], filter, release);
 			}
