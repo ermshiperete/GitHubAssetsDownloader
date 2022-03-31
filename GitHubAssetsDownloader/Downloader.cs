@@ -17,19 +17,30 @@ namespace GitHubAssetsDownloader
 		private HttpClient _client;
 		private Regex      _fileFilter;
 
-		public static async Task<object> GetLatestRelease(string user, string repo)
+		public static async Task<object> GetRelease(string user, string repo, string release)
 		{
+			var uriPart = string.IsNullOrEmpty(release) ? "latest" : $"tags/{release}";
+
 			var client = new RestClient("https://api.github.com/repos");
 			client.UseNewtonsoftJson();
-			var request = new RestRequest($"{user}/{repo}/releases/latest");
+			var request = new RestRequest($"{user}/{repo}/releases/{uriPart}");
+			dynamic result = null;
 			try
 			{
-				return await client.GetAsync<ExpandoObject>(request);
+				result = await client.GetAsync<ExpandoObject>(request);
 			}
 			catch (Exception e)
 			{
 				throw new HttpRequestException($"Can't get releases for {user}/{repo}", e);
 			}
+
+			if (result == null ||
+				(((IDictionary<string, object>)result).ContainsKey("message") && result.message == "Not Found"))
+			{
+				throw new HttpRequestException($"Can't get releases for {user}/{repo}: {result?.message}");
+			}
+
+			return result;
 		}
 
 		private async Task DownloadFile(string uri, string filePath)

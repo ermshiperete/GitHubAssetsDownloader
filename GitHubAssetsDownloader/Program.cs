@@ -10,21 +10,42 @@ namespace GitHubAssetsDownloader
 		{
 			if (args.Length < 3)
 			{
-				Console.WriteLine("Usage: GitHubAssetsDownloader <user> <repo> <outputPath> [filter]");
+				Help();
+				return;
+			}
+
+			string release = null;
+
+			var i = 0;
+			if (args[0] == "--release")
+			{
+				release = args[1];
+				i = 2;
+			}
+
+			if (args.Length < i + 3)
+			{
+				Help();
 				return;
 			}
 
 			using var downloader = new Downloader();
 			try
 			{
-				dynamic release = await Downloader.GetLatestRelease(args[0], args[1]);
-				var filter = args.Length > 3 ? args[3] : null;
-				await downloader.DownloadAssets(args[2], filter, release);
+				dynamic artifacts = await Downloader.GetRelease(args[i], args[i+1], release);
+				var filter = args.Length > i+3 ? args[i+3] : null;
+				await downloader.DownloadAssets(args[i+2], filter, artifacts);
 			}
 			catch (HttpRequestException e)
 			{
 				Console.WriteLine($"ERROR: {e.Message}");
 			}
+		}
+
+		private static void Help()
+		{
+			Console.WriteLine(
+				"Usage: GitHubAssetsDownloader [--release <release>] <user> <repo> <outputPath> [filter]");
 		}
 	}
 }

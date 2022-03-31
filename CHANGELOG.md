@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2022-03-31
+
+### Added
+
+- new parameter "--release <release>"
+
 ### Changed
 
 - use .NET 6
