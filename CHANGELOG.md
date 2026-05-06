@@ -16,6 +16,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-05-05
+
+### Changed
+
+- use .NET 10
+- remove use of RestSharp.Serializers.NewtonsoftJson
+- update dependencies
+
 ## [1.1.0] - 2022-03-31
 
 ### Added
@@ -46,6 +54,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [Unreleased]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.1.0...main
 
+[2.0.0]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.1.1...v2.0.0
 [1.1.0]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/ermshiperete/GitHubAssetsDownloader/compare/v1.0.0...v1.0.1

@@ -32,7 +32,7 @@ namespace GitHubAssetsDownloader
 			using var downloader = new Downloader();
 			try
 			{
-				dynamic artifacts = await Downloader.GetRelease(args[i], args[i+1], release);
+				var artifacts = await Downloader.GetRelease(args[i], args[i+1], release);
 				var filter = args.Length > i+3 ? args[i+3] : null;
 				await downloader.DownloadAssets(args[i+2], filter, artifacts);
 			}
@@ -44,6 +44,7 @@ namespace GitHubAssetsDownloader
 
 		private static void Help()
 		{
+			Console.WriteLine($"GitHubAssetsDownloader {GitVersionInformation.InformationalVersion}");
 			Console.WriteLine(
 				"Usage: GitHubAssetsDownloader [--release <release>] <user> <repo> <outputPath> [filter]");
 		}

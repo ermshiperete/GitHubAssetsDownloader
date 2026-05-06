@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net6.0;netcoreapp3.1</TargetFrameworks>
     <RootNamespace>GitHubAssetsDownloader</RootNamespace>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>GitHubAssetsDownloader</ToolCommandName>
@@ -16,14 +15,15 @@
     <AppendToReleaseNotesProperty><![CDATA[
 See full changelog at https://github.com/ermshiperete/GitHubAssetsDownloader/blob/main/CHANGELOG.md]]>
     </AppendToReleaseNotesProperty>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GitVersion.MsBuild" Version="5.9.0" PrivateAssets="true" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-    <PackageReference Include="RestSharp" Version="107.3.0" />
-    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="107.3.0" />
-    <PackageReference Include="SIL.ReleaseTasks" Version="2.5.0" PrivateAssets="All" />
+    <PackageReference Include="GitVersion.MsBuild" Version="6.7.0" PrivateAssets="true" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.203" PrivateAssets="All" />
+    <PackageReference Include="RestSharp" Version="114.0.0" />
+    <PackageReference Include="SIL.ReleaseTasks" Version="3.2.0" PrivateAssets="All" />
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.7" />
   </ItemGroup>
 
 </Project>
